@@ -3,12 +3,105 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Portfolio</title>
+        <title>Under Development</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh;
+                background-color: #36393f; /* Dark theme background color */
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                color: #fff; /* Text color */
+            }
+
+            .container {
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 36px;
+                margin-bottom: 20px;
+                color: #7289da; /* Discord purple color */
+            }
+
+            p {
+                font-size: 18px;
+                color: #b9bbbe; /* Discord light gray color */
+                margin-bottom: 30px;
+            }
+
+            .underline {
+                position: relative;
+                display: inline-block;
+            }
+
+            .underline a {
+                color: #3498db; /* Discord blue color */
+                text-decoration: none;
+                position: relative;
+            }
+
+            .underline a:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: #3498db;
+                visibility: hidden;
+                transform: scaleX(0);
+                transition: all 0.3s ease-in-out;
+            }
+
+            .underline a:hover:before {
+                visibility: visible;
+                transform: scaleX(1);
+            }
+
+            @keyframes pulse {
+                0% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.05);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+
+            .pulse-animation {
+                animation: pulse 1.5s infinite;
+            }
+
+            .circle-animation {
+                display: inline-block;
+                width: 10px;
+                height: 10px;
+                background-color: #43b581; /* Discord green color */
+                border-radius: 50%;
+                margin: 0 5px;
+                animation: pulse 1.5s infinite alternate;
+            }
+        </style>
     </head>
     <body>
-        <div>
-            <h1>Error 503!</h1>
-            <h2>Website under development.</h2>
+        <div class="container">
+            <h1 class="pulse-animation">Under Development</h1>
+            <p>
+                This portfolio is currently under development. Check back soon
+                for updates.
+            </p>
+            <!-- <div class="underline">
+                <a href="#">Contact Me</a>
+            </div> -->
+            <div class="circle-animation"></div>
+            <div class="circle-animation"></div>
+            <div class="circle-animation"></div>
         </div>
     </body>
 </html>
